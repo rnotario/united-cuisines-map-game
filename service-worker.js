@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/united-cuisines-map-game/precache-manifest.475cac50b5a3f1651f6a260468536b2a.js"
+  "/united-cuisines-map-game/precache-manifest.14564e6619a815c2da4ad8ebac233a56.js"
 );
 
 self.addEventListener('message', (event) => {

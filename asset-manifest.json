@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/united-cuisines-map-game/static/css/main.59672987.chunk.css",
-    "main.js": "/united-cuisines-map-game/static/js/main.f8b102e0.chunk.js",
-    "main.js.map": "/united-cuisines-map-game/static/js/main.f8b102e0.chunk.js.map",
+    "main.js": "/united-cuisines-map-game/static/js/main.967d8842.chunk.js",
+    "main.js.map": "/united-cuisines-map-game/static/js/main.967d8842.chunk.js.map",
     "runtime-main.js": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js",
     "runtime-main.js.map": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js.map",
-    "static/js/2.f1b35bc9.chunk.js": "/united-cuisines-map-game/static/js/2.f1b35bc9.chunk.js",
-    "static/js/2.f1b35bc9.chunk.js.map": "/united-cuisines-map-game/static/js/2.f1b35bc9.chunk.js.map",
+    "static/js/2.07168c8d.chunk.js": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js",
+    "static/js/2.07168c8d.chunk.js.map": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js.map",
     "index.html": "/united-cuisines-map-game/index.html",
-    "precache-manifest.475cac50b5a3f1651f6a260468536b2a.js": "/united-cuisines-map-game/precache-manifest.475cac50b5a3f1651f6a260468536b2a.js",
+    "precache-manifest.14564e6619a815c2da4ad8ebac233a56.js": "/united-cuisines-map-game/precache-manifest.14564e6619a815c2da4ad8ebac233a56.js",
     "service-worker.js": "/united-cuisines-map-game/service-worker.js",
     "static/css/main.59672987.chunk.css.map": "/united-cuisines-map-game/static/css/main.59672987.chunk.css.map",
-    "static/js/2.f1b35bc9.chunk.js.LICENSE.txt": "/united-cuisines-map-game/static/js/2.f1b35bc9.chunk.js.LICENSE.txt"
+    "static/js/2.07168c8d.chunk.js.LICENSE.txt": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.352bd504.js",
-    "static/js/2.f1b35bc9.chunk.js",
+    "static/js/2.07168c8d.chunk.js",
     "static/css/main.59672987.chunk.css",
-    "static/js/main.f8b102e0.chunk.js"
+    "static/js/main.967d8842.chunk.js"
   ]
 }
