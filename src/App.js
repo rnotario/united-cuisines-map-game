@@ -29,7 +29,6 @@ const App = () => {
   const [kilometersLeft, setKilometersLeft] = useState(INITIAL_KILOMETERS);
   const [citiesPlaced, setCitiesPlaced] = useState(0);
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
-  const [currentCity, setCurrentCity] = useState(CAPITAL_CITIES[0]);
   const [userMarker, setUserMarker] = useState(null);
   const [cityMarker, setCityMarker] = useState(null);
   const [isGameOver, setIsGameOver] = useState(false);
@@ -59,11 +58,6 @@ const App = () => {
     }
   }, [kilometersLeft]);
 
-  // Every time the currentCityIndex piece of state is updated, update currentCity
-  React.useEffect(() => {
-    setCurrentCity(CAPITAL_CITIES[currentCityIndex]);
-  }, [currentCityIndex]);
-
   const startGame = () => {
     setIsPlaying(true);
   };
@@ -84,7 +78,12 @@ const App = () => {
   };
 
   const handlePinPlacement = () => {
-    setCityMarker(L.latLng(currentCity.lat, currentCity.long));
+    setCityMarker(
+      L.latLng(
+        CAPITAL_CITIES[currentCityIndex].lat,
+        CAPITAL_CITIES[currentCityIndex].long
+      )
+    );
     showFeedbackAndWait();
   };
 
@@ -123,7 +122,10 @@ const App = () => {
               {kilometersLeft} kilometers left
             </Button>
             {!isGameOver ? (
-              <p>Select the location of "{currentCity.capitalCity}"</p>
+              <p>
+                Select the location of "
+                {CAPITAL_CITIES[currentCityIndex].capitalCity}"
+              </p>
             ) : (
               <Button
                 variant="contained"
