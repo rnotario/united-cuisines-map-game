@@ -28,6 +28,7 @@ const getDistanceInKilometers = (latLng1, latLng2) => {
 const App = () => {
   const [kilometersLeft, setKilometersLeft] = useState(INITIAL_KILOMETERS);
   const [citiesPlaced, setCitiesPlaced] = useState(0);
+  const [currentCityIndex, setCurrentCityIndex] = useState(0);
   const [currentCity, setCurrentCity] = useState(CAPITAL_CITIES[0]);
   const [userMarker, setUserMarker] = useState(null);
   const [cityMarker, setCityMarker] = useState(null);
@@ -38,7 +39,6 @@ const App = () => {
   // Every time a cityMarker is shown, subtract distance to user placed marker from app state
   React.useEffect(() => {
     if (cityMarker !== null) {
-      setCitiesPlaced((prev) => prev + 1);
       const distanceInKilometers = getDistanceInKilometers(
         cityMarker,
         userMarker
@@ -46,6 +46,8 @@ const App = () => {
 
       if (!isUserPlacementCorrect()) {
         setKilometersLeft((prev) => Math.max(0, prev - distanceInKilometers));
+      } else {
+        setCitiesPlaced((prev) => prev + 1);
       }
     }
   }, [cityMarker]);
@@ -57,10 +59,10 @@ const App = () => {
     }
   }, [kilometersLeft]);
 
-  // Every time citiesPlaced is updated, update currentCity
+  // Every time the currentCityIndex piece of state is updated, update currentCity
   React.useEffect(() => {
-    setCurrentCity(CAPITAL_CITIES[citiesPlaced]);
-  }, [citiesPlaced]);
+    setCurrentCity(CAPITAL_CITIES[currentCityIndex]);
+  }, [currentCityIndex]);
 
   const startGame = () => {
     setIsPlaying(true);
@@ -82,12 +84,7 @@ const App = () => {
   };
 
   const handlePinPlacement = () => {
-    setCityMarker(
-      L.latLng(
-        CAPITAL_CITIES[citiesPlaced].lat,
-        CAPITAL_CITIES[citiesPlaced].long
-      )
-    );
+    setCityMarker(L.latLng(currentCity.lat, currentCity.long));
     showFeedbackAndWait();
   };
 
@@ -98,6 +95,7 @@ const App = () => {
       setUserMarker(null);
       setCityMarker(null);
       setIsShowingFeedback(false);
+      setCurrentCityIndex((prev) => prev + 1);
     }, FEEDBACK_DURATION_IN_MILLIS + SNACKBAR_TRANSITION_DURATION);
   };
 
@@ -106,7 +104,7 @@ const App = () => {
   };
 
   const hasGameFinished = () => {
-    return citiesPlaced >= CAPITAL_CITIES.length - 1 || kilometersLeft <= 0;
+    return currentCityIndex >= CAPITAL_CITIES.length - 1 || kilometersLeft <= 0;
   };
 
   const handleFeedbackClose = () => {
