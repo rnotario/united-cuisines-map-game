@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Roberto Notario",
+  "homepage": "http://rnotario.github.io/united-cuisines-map-game",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/lab": "^4.0.0-alpha.56",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@types/leaflet": "^1.5.17"
+    "@types/leaflet": "^1.5.17",
+    "gh-pages": "^3.1.0"
   }
 }
