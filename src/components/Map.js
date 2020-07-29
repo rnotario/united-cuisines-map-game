@@ -24,7 +24,7 @@ const Map = ({ cityMarker, userMarker, onClick }) => {
         style={() => ({
           color: "#4a83ec",
           weight: 0.5,
-          fillColor: "#1a1d62",
+          fillColor: "#3f51b5",
           fillOpacity: 1,
         })}
       />
