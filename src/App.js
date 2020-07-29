@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Snackbar } from "@material-ui/core";
+import { Button, Snackbar, Paper } from "@material-ui/core";
 import L from "leaflet";
 
 import "./App.css";
@@ -110,45 +110,74 @@ const App = () => {
     setIsShowingFeedback(false);
   };
 
-  return (
-    <div className="container">
-      <div className="top-controls">
-        {isPlaying ? (
-          <>
-            <Button variant="contained" fullWidth>
-              {citiesPlaced} cities placed
-            </Button>
-            <Button variant="contained" fullWidth>
-              {kilometersLeft} kilometers left
-            </Button>
-            {!isGameOver ? (
-              <p>
-                Select the location of "
-                {CAPITAL_CITIES[currentCityIndex].capitalCity}"
-              </p>
-            ) : (
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                onClick={restartGame}
-              >
-                Restart
-              </Button>
-            )}
-          </>
+  const renderBottomControls = () => {
+    return (
+      isPlaying &&
+      !isGameOver && (
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handlePinPlacement}
+        >
+          Place
+        </Button>
+      )
+    );
+  };
+
+  const renderTopControls = () => {
+    return isPlaying ? (
+      <>
+        <Paper
+          style={{
+            backgroundColor: "lightgray",
+            padding: "10px",
+            marginBottom: "5px",
+          }}
+        >
+          {citiesPlaced} cities placed
+        </Paper>
+        <Paper
+          style={{
+            backgroundColor: "lightgray",
+            padding: "10px",
+            marginBottom: "5px",
+          }}
+        >
+          {kilometersLeft} kilometers left
+        </Paper>
+        {!isGameOver ? (
+          <p>
+            Select the location of "
+            {CAPITAL_CITIES[currentCityIndex].capitalCity}"
+          </p>
         ) : (
           <Button
             variant="contained"
             color="primary"
-            size="large"
             fullWidth
-            onClick={startGame}
+            onClick={restartGame}
           >
-            Start
+            Restart
           </Button>
         )}
-      </div>
+      </>
+    ) : (
+      <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        fullWidth
+        onClick={startGame}
+      >
+        Start
+      </Button>
+    );
+  };
+
+  return (
+    <div className="container">
+      <div className="top-controls">{renderTopControls()}</div>
       <div className="map">
         <Map
           userMarker={userMarker}
@@ -156,17 +185,7 @@ const App = () => {
           onClick={handleMapClick}
         />
       </div>
-      {isPlaying && !isGameOver && (
-        <div className="action">
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handlePinPlacement}
-          >
-            Place
-          </Button>
-        </div>
-      )}
+      <div className="bottom-controls">{renderBottomControls()}</div>
       <Snackbar
         open={isShowingFeedback}
         autoHideDuration={FEEDBACK_DURATION_IN_MILLIS}
