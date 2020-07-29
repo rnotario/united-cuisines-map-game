@@ -1,5 +1,5 @@
 import React from "react";
-import { Map as LeafletMap, GeoJSON, Marker } from "react-leaflet";
+import { Map as LeafletMap, GeoJSON, Marker, ZoomControl } from "react-leaflet";
 
 import geoJSON from "../custom.geo.json";
 
@@ -11,7 +11,7 @@ const Map = ({ cityMarker, userMarker, onClick }) => {
       minZoom={3}
       maxZoom={7}
       attributionControl={true}
-      zoomControl={true}
+      zoomControl={false}
       doubleClickZoom={true}
       scrollWheelZoom={true}
       dragging={true}
@@ -28,6 +28,7 @@ const Map = ({ cityMarker, userMarker, onClick }) => {
           fillOpacity: 1,
         })}
       />
+      <ZoomControl position="bottomleft" />
       {userMarker && <Marker position={[userMarker.lat, userMarker.lng]} />}
       {cityMarker && <Marker position={[cityMarker.lat, cityMarker.lng]} />}
     </LeafletMap>
