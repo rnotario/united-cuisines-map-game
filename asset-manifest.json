@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/united-cuisines-map-game/static/css/main.59672987.chunk.css",
+    "main.js": "/united-cuisines-map-game/static/js/main.8d90f7df.chunk.js",
+    "main.js.map": "/united-cuisines-map-game/static/js/main.8d90f7df.chunk.js.map",
+    "runtime-main.js": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js",
+    "runtime-main.js.map": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js.map",
+    "static/js/2.0b7e1ba1.chunk.js": "/united-cuisines-map-game/static/js/2.0b7e1ba1.chunk.js",
+    "static/js/2.0b7e1ba1.chunk.js.map": "/united-cuisines-map-game/static/js/2.0b7e1ba1.chunk.js.map",
+    "index.html": "/united-cuisines-map-game/index.html",
+    "precache-manifest.2d2a224e4d4a3e94baf7783d0258c915.js": "/united-cuisines-map-game/precache-manifest.2d2a224e4d4a3e94baf7783d0258c915.js",
+    "service-worker.js": "/united-cuisines-map-game/service-worker.js",
+    "static/css/main.59672987.chunk.css.map": "/united-cuisines-map-game/static/css/main.59672987.chunk.css.map",
+    "static/js/2.0b7e1ba1.chunk.js.LICENSE.txt": "/united-cuisines-map-game/static/js/2.0b7e1ba1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.352bd504.js",
+    "static/js/2.0b7e1ba1.chunk.js",
+    "static/css/main.59672987.chunk.css",
+    "static/js/main.8d90f7df.chunk.js"
+  ]
+}
