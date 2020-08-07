@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/united-cuisines-map-game/static/css/main.59672987.chunk.css",
-    "main.js": "/united-cuisines-map-game/static/js/main.967d8842.chunk.js",
-    "main.js.map": "/united-cuisines-map-game/static/js/main.967d8842.chunk.js.map",
+    "main.js": "/united-cuisines-map-game/static/js/main.1cf3e635.chunk.js",
+    "main.js.map": "/united-cuisines-map-game/static/js/main.1cf3e635.chunk.js.map",
     "runtime-main.js": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js",
     "runtime-main.js.map": "/united-cuisines-map-game/static/js/runtime-main.352bd504.js.map",
     "static/js/2.07168c8d.chunk.js": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js",
     "static/js/2.07168c8d.chunk.js.map": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js.map",
     "index.html": "/united-cuisines-map-game/index.html",
-    "precache-manifest.14564e6619a815c2da4ad8ebac233a56.js": "/united-cuisines-map-game/precache-manifest.14564e6619a815c2da4ad8ebac233a56.js",
+    "precache-manifest.f539a4f0b22da60b7645badc073216ff.js": "/united-cuisines-map-game/precache-manifest.f539a4f0b22da60b7645badc073216ff.js",
     "service-worker.js": "/united-cuisines-map-game/service-worker.js",
     "static/css/main.59672987.chunk.css.map": "/united-cuisines-map-game/static/css/main.59672987.chunk.css.map",
     "static/js/2.07168c8d.chunk.js.LICENSE.txt": "/united-cuisines-map-game/static/js/2.07168c8d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.352bd504.js",
     "static/js/2.07168c8d.chunk.js",
     "static/css/main.59672987.chunk.css",
-    "static/js/main.967d8842.chunk.js"
+    "static/js/main.1cf3e635.chunk.js"
   ]
 }
