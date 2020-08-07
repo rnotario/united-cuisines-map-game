@@ -118,6 +118,7 @@ const App = () => {
           variant="contained"
           color="primary"
           onClick={handlePinPlacement}
+          disabled={!userMarker}
         >
           Place
         </Button>
